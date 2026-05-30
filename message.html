@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message For My Girl ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="stars"></div>
+<div class="twinkling"></div>
+
+<!-- MUSIC -->
+<audio id="music" autoplay loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<!-- VOICE -->
+<audio id="voiceMessage" autoplay>
+  <source src="voice.mp3" type="audio/mp3">
+</audio>
+
+<div class="message-page">
+
+  <div class="message-card">
+
+    <h1>Message For My Girl ❤️</h1>
+    
+    <p>
+      Happy anniversary sayanggg ❤️🥺
+    </p>
+
+    <p>
+      Di hari anniversary kita yang kepertama ini aku ada pesan buat kamu 💌 Aku mau bilang makasihhhh
+      bangettt 🤍 karena kamu udah mau bertahan sejauh ini sama aku. Jujur aja yah, selama kita bareng,
+      banyak banget hal yang lebih indah karena ada kamu 🌷✨ Yaaa walaupun di hubungan kita ini ga
+      selalu baik-baik aja ya 😭 kadang adaaa aja masalahnya, entah aku atau kamu, kita kadang bikin kesel
+      satu sama lain 😅 tapi justru itu yang buat hubungan kita bertahan sampai sekarang ❤️‍🩹
+    </p>
+
+    <p>
+      Aku seneng banget kita masih bisa sama-sama terus sampai sekarang 🫶 Makasih banyak yah udah
+      mau berjuang bareng buat hubungan kita ini 🌹
+    </p>  
+
+    <p>
+      Aku sadar, aku belum bisa jadi pasangan yang baik buat kamu 😔 Kadang aku masih sering buat kamu
+      kesel, buat kamu capek sama sikap aku, bahkan aku juga sering bikin kamu sakit hati 💔 Tapi kamu
+      percaya deh, di balik semua itu, aku tuh sebenarnya sayangggg bangettt sama kamu ❤️ bahkan
+      sayangku itu susah banget buat dijelasin pake kata-kata 🥺 hehe.
+    </p>  
+
+    <p>
+      Sekali lagi makasih banyak yah 🤍 udah selalu sabar sama aku, mau dengerin cerita aku 🫂 Makasih
+      juga udah selalu support aku 🌷 Aku tuh bersyukurrrr bangettt dikenalin sama kamu ✨ Buat aku yah,
+      kamu tuh bukan sekedar pacar doang ❤️ tapi kamu tuh tempat pulang ternyaman aku 🏡 pas aku
+      capek, sedih sampe senang sekalipun 🥹
+    </p>  
+
+    <p>
+      Aku berharap hubungan kita ga berhenti sampai di sini aja yah 🤞 Semoga kita bisa bareng-bareng
+      terus ❤️ saling ngertiin satu sama lain sama terus pertahanin hubungan kita, yaaa walaupun nanti pasti
+      banyak banget cobaannya 🌧️ Aku pengen deh suatu hari nanti, kita berhasil ngelewatin semuanya
+      ini bareng-bareng 🫶✨ Nggak tau sebahagia apa kita berdua saat itu 🥺💞
+    </p>
+    
+    <p>
+      Sekali lagi aku mau ngucapin makasih banyak yah ❤️
+    </p>
+    
+    <p>
+      Happy anniversary sayanggg 🎉💖
+      Aku tuh sayanggg bangettt sama kamu 🥺❤️ ya nggak cuma hari ini doang, besok, lusa, ya pokoknya
+      selamanya dah hehe ♾️💞
+    </p>
+    
+    <p>
+      Love you sayanggg 😚❤️
+    </p>
+    
+
+  </div>
+
+</div>
+
+<script>
+
+const music =
+document.getElementById("music");
+
+/* VOLUME */
+music.volume = 0.1;
+
+/* AMBIL POSISI */
+const savedTime =
+localStorage.getItem("musicTime");
+
+/* JIKA ADA POSISI */
+if(savedTime){
+
+  music.currentTime =
+  parseFloat(savedTime);
+
+}
+
+/* PLAY SETELAH POSISI TERPASANG */
+music.addEventListener("loadedmetadata", ()=>{
+
+  music.play();
+
+});
+
+/* SIMPAN POSISI */
+setInterval(()=>{
+
+  localStorage.setItem(
+    "musicTime",
+    music.currentTime
+  );
+
+},500);
+
+</script>
+
+</body>
+</html>

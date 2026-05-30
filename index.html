@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Anniversary</title>
+  <h2 id="typing"></h2>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="blur1"></div>
+  <div class="blur2"></div>
+
+  <!-- LOVE -->
+  <div id="love-container"></div>
+
+  <!-- MUSIC -->
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- HALAMAN AWAL -->
+  <div class="intro" id="intro">
+
+    <div class="box">
+
+      <h1>Happy First Anniversary ❤️</h1>
+
+      <input type="text" id="myName" placeholder="Nama kamu">
+
+      <input type="text" id="partnerName" placeholder="Nama pasangan">
+
+      <button onclick="startWebsite()">
+        Masuk
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- HALAMAN UTAMA -->
+  <div class="main hidden" id="main">
+
+    <h1 id="title"></h1>
+
+    <div class="cards">
+
+      <!-- CARD 1 -->
+      <div class="card hidden-card">
+
+        <img src="foto1.jpg">
+
+        <p class="typing"
+          data-text="HAPPY FIRST ANNIVERSARY sayanggg ❤️❤️❤️.
+          Dihari yang special kita ini, aku mau ngucapin
+          selamat untuk kita berdua udah ngelewatin semua
+          ini bareng bareng, selama kurang lebih 1 tahun
+          ini, aku beruntung banget bisa sama sama terus
+          sama kamu, kamu masih mau nerima aku walaupun
+          kadang aku sering buat kamu sakit hati">
+        </p>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card hidden-card">
+
+        <img src="foto2.jpg">
+
+        <p class="typing"
+          data-text="Makasih yah sayang buat selama kurang lebih 1 tahun
+          ini, makasih udah mau nerima aku apa adanya, makasih
+          udah mau selalu support aku, makasih udah selalu mau
+          maafin semua kesalahan yang pernah aku lakuin ke kamu,
+          aku ga tau mau bilang apa lagi, intinya maksihhh
+          banyakkk sayanggggkuuu ❤️❤️❤️">
+        </p>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card hidden-card">
+
+        <img src="foto3.jpg">
+
+        <p class="typing"
+          data-text="Dan ini terakhir aku mau minta maaf ke kamu buat selama kurang
+          lebih 1 tahun ini, aku minta maaf kadang sering banget
+          buat kamu kesel sama apa yang aku lakuin, aku minta maaf
+          buat semua itu, aku ga bermaksud ngelakuin itu buat
+          nyakitin kamu tapi aku cuma pengen kamu sadar kalau aku
+          sesayang itu sama kamu. HAPPY FIRST ANNIVERSARY TO OUR
+          RELATIONSHIP, MY FAVORITE GIRL ❤️❤️❤️">
+        </p>
+
+      </div>
+      
+      <button id="messageButton"
+      onclick="window.location.href='message.html'">
+      Dengarkan Pesan ❤️
+    </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

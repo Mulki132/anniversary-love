@@ -1,0 +1,369 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0d0d1f;
+  overflow-x:hidden;
+  color:white;
+}
+
+/* HALAMAN AWAL */
+.intro{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.box{
+  background:white;
+  padding: 18px;
+  border-radius:20px;
+  text-align:center;
+  width:75%;
+  max-width: 280px;
+}
+
+.box h1{
+  color:#ff1493;
+}
+
+.box input{
+  width:90%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:10px;
+  border:none;
+  background:#f1f1f1;
+}
+
+.box button{
+  padding:10px 25px;
+  border:none;
+  border-radius:10px;
+  background:#ff1493;
+  color:white;
+  cursor:pointer;
+}
+
+/* HALAMAN UTAMA */
+.hidden{
+  display:none;
+}
+
+.main{
+  padding:30px;
+  text-align:center;
+}
+
+#title{
+
+  text-align:center;
+
+  font-size:32px;
+
+  line-height:1.3;
+
+  margin-bottom:30px;
+
+  color:white;
+
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(10px);
+  width:300px;
+  padding:20px;
+  border-radius:20px;
+  opacity:0;
+}
+
+.card img{
+  width:200px;
+  height:200px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid pink;
+  box-shadow:0 0 25px white;
+  transition:0.5s;
+}
+
+.card img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 40px #ff1493;
+}
+
+.card p{
+  color:white;
+  margin-top:15px;
+  text-align:left;
+  line-height:1.7;
+  padding:0 10px;
+  text-shadow:0 0 5px rgba(255,255,255,0.5);
+}
+
+
+/* LOVE */
+.love{
+  position:fixed;
+  top:-20px;
+  font-size:20px;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh);
+    opacity:0;
+  }
+}
+
+/* BACKGROUND GLOW */
+.blur1,
+.blur2{
+  position:fixed;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  filter:blur(80px);
+  z-index:-1;
+}
+
+.blur1{
+  background:#ff1493;
+  top:10%;
+  left:10%;
+  animation:move1 8s infinite alternate;
+}
+
+.blur2{
+  background:#ff69b4;
+  bottom:10%;
+  right:10%;
+  animation:move2 8s infinite alternate;
+}
+
+@keyframes move1{
+  from{
+    transform:translate(0,0);
+  }
+  to{
+    transform:translate(100px,50px);
+  }
+}
+
+@keyframes move2{
+  from{
+    transform:translate(0,0);
+  }
+  to{
+    transform:translate(-100px,-50px);
+  }
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* EFEK KETIK */
+.typing{
+  border-right:3px solid pink;
+  white-space:normal;
+  overflow:hidden;
+  animation:blink 0.7s infinite;
+}
+
+@keyframes blink{
+  50%{
+    border-color:transparent;
+  }
+}
+
+/* CARD MUNCUL */
+.hidden-card{
+  opacity:0;
+  transform:translateY(50px);
+}
+
+.show-card{
+  animation:showCard 1s forwards,
+  float 3s ease-in-out infinite;
+}
+
+@keyframes showCard{
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* BACKGROUND BINTANG */
+.stars,
+.twinkling{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-2;
+}
+
+/* BINTANG */
+.stars{
+  background:
+    black
+    url("https://www.transparenttextures.com/patterns/stardust.png")
+    repeat;
+}
+
+/* KEDIP */
+.twinkling{
+  background:
+    transparent
+    url("https://media.githubusercontent.com/media/kognise/water.css/master/docs/stars.png")
+    repeat;
+
+  animation:moveStars 80s linear infinite;
+
+  opacity:0.4;
+}
+
+@keyframes moveStars{
+
+  from{
+    transform:translateY(0);
+  }
+
+  to{
+    transform:translateY(-1000px);
+  }
+
+}
+
+/* TOMBOL PESAN */
+#messageButton{
+
+  display:block;
+
+  margin:50px auto;
+
+  padding:15px 35px;
+
+  border:none;
+  border-radius:15px;
+
+  background:#ff1493;
+
+  color:white;
+
+  font-size:18px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+#messageButton:hover{
+
+  transform:scale(1.05);
+
+  box-shadow:0 0 20px #ff1493;
+}
+
+/* HALAMAN PESAN */
+.message-page{
+
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:40px;
+}
+
+.message-card{
+
+  width: 90%;
+
+  max-width:320px;
+
+  background:rgba(255,255,255,0.12);
+
+  backdrop-filter:blur(15px);
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  color:white;
+
+  text-align:left;
+
+  line-height:2;
+
+  box-shadow:0 0 30px rgba(255,255,255,0.2);
+}
+
+.message-card h1{
+
+  font-size: 24px;
+
+  text-align:center;
+
+  font-family:'Dancing Script', cursive;
+
+  margin-bottom:30px;
+
+  color:pink;
+
+  text-shadow:0 0 15px pink;
+}
+
+.message-card p{
+
+  font-size:18px;
+
+  font-family:'Dancing Script', cursive;
+
+  line-height: 1.8;
+
+  text-shadow:0 0 5px rgba(255,255,255,0.5);
+
+  margin-bottom: 25px;
+}
+
+#messageButton{
+  opacity:0;
+}
